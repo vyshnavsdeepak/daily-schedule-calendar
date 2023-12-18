@@ -63,72 +63,74 @@ function getAccessToken(oAuth2Client) {
 function addEvents(auth) {
   const calendar = google.calendar({ version: 'v3', auth });
 
+  const today = new Date().toISOString().split('T')[0];
+
   // Define your events here, following the structure you provided
   const events = [
     {
       summary: 'Wake up and get ready',
-      start: { dateTime: '2023-12-15T06:30:00+05:30' },
-      end: { dateTime: '2023-12-15T07:00:00+05:30' },
+      start: { dateTime: `${today}T06:30:00+05:30`},
+      end: { dateTime: `${today}T07:00:00+05:30`},
     },
     {
       summary: 'Cycling',
-      start: { dateTime: '2023-12-15T07:00:00+05:30' },
-      end: { dateTime: '2023-12-15T08:00:00+05:30' },
+      start: { dateTime: `${today}T07:00:00+05:30`},
+      end: { dateTime: `${today}T08:00:00+05:30`},
     },
     {
       summary: 'Breakfast',
-      start: { dateTime: '2023-12-15T08:00:00+05:30' },
-      end: { dateTime: '2023-12-15T09:00:00+05:30' },
+      start: { dateTime: `${today}T08:00:00+05:30`},
+      end: { dateTime: `${today}T09:00:00+05:30`},
     },
     {
       summary: 'Work',
-      start: { dateTime: '2023-12-15T09:00:00+05:30' },
-      end: { dateTime: '2023-12-15T12:00:00+05:30' },
+      start: { dateTime: `${today}T09:00:00+05:30`},
+      end: { dateTime: `${today}T12:00:00+05:30`},
     },
     {
       summary: 'Lunch',
-      start: { dateTime: '2023-12-15T12:00:00+05:30' },
-      end: { dateTime: '2023-12-15T13:00:00+05:30' },
+      start: { dateTime: `${today}T12:00:00+05:30`},
+      end: { dateTime: `${today}T13:00:00+05:30`},
     },
     {
       summary: 'Work',
-      start: { dateTime: '2023-12-15T13:00:00+05:30' },
-      end: { dateTime: '2023-12-15T15:00:00+05:30' },
+      start: { dateTime: `${today}T13:00:00+05:30`},
+      end: { dateTime: `${today}T15:00:00+05:30`},
     },
     {
       summary: 'Afternoon break',
-      start: { dateTime: '2023-12-15T15:00:00+05:30' },
-      end: { dateTime: '2023-12-15T15:30:00+05:30' },
+      start: { dateTime: `${today}T15:00:00+05:30`},
+      end: { dateTime: `${today}T15:30:00+05:30`},
     },
     {
       summary: 'Work',
-      start: { dateTime: '2023-12-15T15:30:00+05:30' },
-      end: { dateTime: '2023-12-15T17:00:00+05:30' },
+      start: { dateTime: `${today}T15:30:00+05:30`},
+      end: { dateTime: `${today}T17:00:00+05:30`},
     },
     {
       summary: 'Cooking',
-      start: { dateTime: '2023-12-15T17:00:00+05:30' },
-      end: { dateTime: '2023-12-15T18:00:00+05:30' },
+      start: { dateTime: `${today}T17:00:00+05:30`},
+      end: { dateTime: `${today}T18:00:00+05:30`},
     },
     {
       summary: 'Dinner',
-      start: { dateTime: '2023-12-15T18:00:00+05:30' },
-      end: { dateTime: '2023-12-15T19:00:00+05:30' },
+      start: { dateTime: `${today}T18:00:00+05:30`},
+      end: { dateTime: `${today}T19:00:00+05:30`},
     },
     {
       summary: 'Free time/Relaxation',
-      start: { dateTime: '2023-12-15T19:00:00+05:30' },
-      end: { dateTime: '2023-12-15T20:00:00+05:30' },
+      start: { dateTime: `${today}T19:00:00+05:30`},
+      end: { dateTime: `${today}T20:00:00+05:30`},
     },
     {
       summary: 'Leisure activities (reading, entertainment)',
-      start: { dateTime: '2023-12-15T20:00:00+05:30' },
-      end: { dateTime: '2023-12-15T21:00:00+05:30' },
+      start: { dateTime: `${today}T20:00:00+05:30`},
+      end: { dateTime: `${today}T21:00:00+05:30`},
     },
     {
       summary: 'Prepare for bed and wind down',
-      start: { dateTime: '2023-12-15T21:00:00+05:30' },
-      end: { dateTime: '2023-12-15T22:00:00+05:30' },
+      start: { dateTime: `${today}T21:00:00+05:30`},
+      end: { dateTime: `${today}T22:00:00+05:30`},
     },
   ];
 
